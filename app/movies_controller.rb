@@ -21,29 +21,23 @@ def can_be_created_with_a_hash_of_attributes
       in_theaters: false
   }
   movie = Movie.create (attributes)
-<<<<<<< HEAD
   movie.save
   movie
 end
 
 def can_be_created_in_a_block(args = { title: "Home Alone", release_date: 1990 })
-=======
 end
 
 def can_be_created_in_a_block(args = nil)
->>>>>>> 864aabb5554d34a8c9c9f4aa5211b88a7ecc9ccb
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
   Movie.create do |m|
-<<<<<<< HEAD
     m.title = args[:title]
     m.release_date = args[:release_date]
     m.save
-=======
   m.title = "Home Alone"
   m.release_date = 1990
->>>>>>> 864aabb5554d34a8c9c9f4aa5211b88a7ecc9ccb
   end
 end
 
@@ -110,9 +104,5 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-<<<<<<< HEAD
   Movie.delete_all
-=======
-  __
->>>>>>> 864aabb5554d34a8c9c9f4aa5211b88a7ecc9ccb
 end
